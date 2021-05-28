@@ -34,7 +34,7 @@ background: linear-gradient(to bottom, #252525 0%,#252525 49%,#111111 50%,#26262
 .ui-li-mobileSteps { margin: 0 5px; float: left; }
 .ui-lnk-mobileSteps { display: block; width: 24px; background: url(../images/ui/mobileStepsBg.png) no-repeat; color: #fff; font-size: 16px; text-align: center; line-height: 24px; cursor: pointer;}
 .ui-li-mobileSteps-active > .ui-lnk-mobileSteps { background: url(../images/ui/mobileStepsActiveBg.png); cursor: text; }
-.ui-lnk-mobileSteps-previous, .ui-lnk-mobileSteps-next { display: block; width: 22px; height: 57px; background: url(../images/ui/mobileStepsArrow.png) no-repeat; margin-top: -28.5px; position: absolute; top: 40%; }
+.ui-lnk-mobileSteps-previous, .ui-lnk-mobileSteps-next { display: block; width: 22px; height: 57px; background: url(../images/ui/mobileStepsArrow.png) no-repeat; margin-top: -28.5px; position: absolute; top: 450px; }
 .ui-lnk-mobileSteps-previous { background-position: left top; left: 190px; }
 .ui-lnk-mobileSteps-next { background-position: -22px top; right: 25px; }
 .ui-h3-mobileSteps-title { color: #fff; font-size: 16px; }
