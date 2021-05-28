@@ -1,0 +1,199 @@
+/*===================================================================================================================*/
+/*                                                    Component                                                      */
+/*===================================================================================================================*/
+a { text-decoration: none; outline: none; behavior:expression(this.onFocus=this.blur());}
+.cpn-boxzero { margin: 0; padding: 0;}
+ul.cpn-boxzero > li { list-style: none;}
+.cpn-inBlock { display: inline-block; *display: inline; zoom: 1;}
+.cpn-inBlock-row { letter-spacing: -0.31em; *letter-spacing: normal;}
+.cpn-inBlock-row > .cpn-inBlock-cell,
+ul.cpn-inBlock-row > li { display: inline-block; *display: inline; zoom: 1; letter-spacing: normal; word-spacing: normal; vertical-align: top;}
+.cpn-ul-decimal { padding-left: 24px;}
+.cpn-ul-decimal > li { list-style-type: decimal;}
+.cpn-clear-left { clear: left;}
+.cpn-clear-right { clear: right;}
+.cpn-clear-both { clear: both;}
+
+/*===================================================================================================================*/
+/*                                                        UI                                                         */
+/*===================================================================================================================*/
+/* pageNav */
+.ui-ul-pageNav {width: 146px;letter-spacing: 1.5px;}
+.ui-ul-pageNav > li {overflow: hidden;height: 27px;margin: 0 3px;text-align: center;}
+.ui-ul-pageNav > li:last-child { border-bottom: none;}
+.ui-ul-pageNav > li > a {display: block; color: #c48e32;padding: 5px 0;background-color: #252525; letter-spacing: 0;}
+.ui-ul-pageNav > li > a:hover { color: #fff;}
+.ui-ul-pageNav > li > a:after {display: block;position: absolute;left: 0;content: "";width: 139px;height: 8px;background: url(../images/ui/pageNav_line.png) no-repeat center bottom;}
+.ui-ul-pageNav li:last-child > a:after {background: none;}
+.ui-ul-pageNav > li.li-active { margin: 0 3px;}
+.ui-ul-pageNav > li.li-active > a {color: #000000;background-color: #c48f33; letter-spacing: 0;}
+.ui-ul-subPageNav {}
+.ui-ul-subPageNav > li {margin: 0 7px;background-color: #262626;}
+.ui-ul-subPageNav > li.li-active {}
+.ui-ul-subPageNav > li > a { display: block; position: relative; margin: 0 3px; padding: 5px 0; background: url(../images/ui/subPageNav_line.png) center 0px no-repeat; color: #f55027; }
+.ui-ul-subPageNav > li > a {display: block;margin: 0 3px;padding: 9px 0 1px 0;color: #F55027;}
+.ui-ul-subPageNav > li > a:hover { color: #0b9790;}
+.ui-ul-subPageNav > li:last-child > a:after {content:"";display: block;height: 5px;background: url(../images/ui/subPageNav_line.png) center 4px no-repeat;}
+
+/* step */
+.ui-h3-category { font-weight: normal; position: absolute; top: 0; left: 0;}
+.ui-ul-steps { text-align: right;}
+.ui-li-step { color: #000;cursor: pointer; background: no-repeat center;}
+.ui-lnk-step { display: block; width: 120px; height: 24px; /*padding-left: 35px; */font-size: 15px; color: #000; text-align: center;}
+.ui-li-step1 {margin-right: 2px;}
+.ui-lnk-step:hover { color: #000;}
+.ui-li-step1, .ui-li-step2, .ui-li-step3, .ui-li-step4 { background-image: url(../images/ui/step1.png); border-radius: 5px 5px 0px 0px;}
+.ui-li-step.li-active {color: #fff; pointer-events: none;}
+.ui-li-step1.li-active, .ui-li-step2.li-active, .ui-li-step3.li-active, .ui-li-step4.li-active { background-image: url(../images/ui/step1Active.png);}
+.ui-li-step1:hover, .ui-li-step2:hover, .ui-li-step3:hover, .ui-li-step4:hover{ background-image: url(../images/ui/step1hover.png);}
+
+
+/* unitTitle */
+.ui-h2-unitTitle { margin-bottom: 20px; padding-bottom: 20px; font-weight: normal; border-bottom: 1px dotted #F55027; letter-spacing: 3px;}
+
+/*text*/
+.txt-red,.txt-failure { color:#fe5565; }
+.txt-success { color: #00ff00; }
+
+/*===================================================================================================================*/
+/*                                                      Theme                                                        */
+/*===================================================================================================================*/
+/* content-desc */
+.theme-content { padding: 20px 10px; /*background-color: #000; border: 1px solid #f55027;*/}
+.theme-content-desc { position: relative; margin-bottom: 20px; padding:0 0 20px 130px;color: #afafaf; letter-spacing: 1px; line-height: 2em; border-bottom: 1px dotted #F55027; }
+.theme-content-desc > h3 { position: absolute; top: 0; left: 0; margin: 0; width: 125px; color: #F55027; }
+.theme-content-desc > div > h4 { margin: 0; color: #29A5B3; font-weight: normal; }
+.theme-content-desc > div > ol {}
+
+/*HelpCenter-appInstall*/
+.theme-content-desc.appInstall { height: 4375px; padding: 20px; color: #393939; border: 1px solid #ccc !important;}
+.theme-appStep { width: 632px; height:310px; padding-bottom: 43px; background-position: -20px 30px; background-repeat: no-repeat; }
+.theme-appStep .li-appStepIos { width: 632px; height:413px; padding-bottom: 43px; background-position: -20px 10px; background-repeat: no-repeat; }
+.theme-appStep.appStep-1 { background-image: url(../images/app/appImg01.jpg); }
+.theme-appStep.appStep-2 { background-image: url(../images/app/appImg02.jpg); }
+.theme-appStep .li-appStepIos.step01 { background-image: url(../images/app/appImg03.jpg); }
+.theme-appStep .li-appStepIos.step02 { background-image: url(../images/app/appImg04.jpg); }
+.theme-appStep .li-appStepIos.step03 { background-image: url(../images/app/appImg05.jpg); }
+.theme-appStep .li-appStepIos.step04 { background-image: url(../images/app/appImg06.jpg); }
+.theme-appStep .li-appStepIos.step05 { background-image: url(../images/app/appImg07.jpg); }
+.theme-appStep .li-appStepIos.step06 { background-image: url(../images/app/appImg08.jpg); }
+.theme-appStep .li-appStepIos.step07 { background-image: url(../images/app/appImg09.jpg); }
+.theme-appStep .li-appStepIos.step08 { background-image: url(../images/app/appImg10.jpg); }
+/*===================================================================================================================*/
+/*                                                      Layout                                                       */
+/*===================================================================================================================*/
+body { background-color: #000; color: #fff; font: 13px "Microsoft YaHei", Arial, Helvetica, sans-serif;}
+.lay-container { min-height: 690px;background: #000 url(../images/layout/containerBg.jpg) no-repeat top center; }
+.lay-screen { width: 996px; position: relative; margin: 0 auto; clear: both;}
+
+/*HelpCenter-appInstall*/
+.lay-are-pageTitle.appInstall { width: 725px; border-bottom: 2px solid #f6b019; left: 28px; position: absolute; top: 20px; }
+.lay-are-pageTitle.appInstall > h1 { margin: 0; font-size: 16px; line-height: 35px; padding-left: 8px; color: #f6b636; border: none; }
+.lay-are-pageContent.appInstall { width: 683px; height: 4400px; padding: 85px 50px 60px; background-color: #FFF; }
+/*===================================================================================================================*/
+/*                                                      Header                                                       */
+/*===================================================================================================================*/
+.reg-header { padding-top: 20px;}
+/* .reg-header > */
+.lnk-logo { width: 234px; height: 79px; background: url(../images/header/logo.png) no-repeat; text-indent: -9999px;}
+.h1-pageTitle { font-weight: normal; color: #fff; letter-spacing: 5px; position: absolute; top: 30px; left: 250px;}
+.are-lang { position: absolute; top: 0; right: 0;}
+
+/* .reg-header > .are-lang > */
+.ul-lang { display: none;background-color: #000;}
+.lnk-lang {display: block;position: relative;width: 81px;height: 22px;padding:5px 0 0 36px;color: #fff;font-size: 15px;}
+.are-lang > .lnk-lang { transition: all 0.4s linear;}
+.are-lang:hover > .lnk-lang { color: #000; transition: none}
+.are-lang:hover > .lnk-lang,
+.lnk-lang:hover { background-color: #555; }
+.bg-lang { position: absolute; left: 10px;width: 19px; height: 19px; background: no-repeat center; }
+.bg-lang-tw { background-image: url(../images/header/lang_iconTw.jpg);}
+.bg-lang-cn { background-image: url(../images/header/lang_iconCn.jpg);}
+.bg-lang-en { background-image: url(../images/header/lang_iconEn.jpg);}
+.bg-lang-th { background-image: url(../images/header/lang_iconTh.jpg);}
+.bg-lang-arrow { position: absolute; top: 7px; right: 5px;width: 17px; height: 11px; }
+/*===================================================================================================================*/
+/*                                                       main                                                        */
+/*===================================================================================================================*/
+.reg-main { min-height: 350px; margin-top: 20px; background: no-repeat center top; }
+/* .reg-main > */
+.are-pageNav { margin-right: 20px;}
+.are-content { width: 808px; position: relative;}
+.theme-content-desc:last-child {border: 0px;margin-bottom: -20px;}
+/* .reg-main > .are-content */
+.blk-steps { overflow: hidden; margin-right: 15px;}
+.blk-imgs { border: 1px solid #F55027; background: #000; padding:20px 25px;}
+.bg-step { height: 545px; background: no-repeat center;}
+
+/*HelpCenter-appInstall*/
+h3.h3-appInstall { width: auto; font-size: 18px; color: #f6b436; position: relative; }
+.h3-step2 { padding-top: 22px; }
+.txt-appStep { display: inline-block; font-size: 24px; color: #000; letter-spacing: 0; font-weight: bold; margin: 87px 0 0 356px; }
+.txt-appStep em { padding-left: 6px; font-size:38px; color:#c01b00; }
+.blk-appStepDec { font-size: 16px; line-height: 30px; color: #393939; }
+.appStep-1 .blk-appStepDec { font-size: 16px; line-height: 28px; font-weight: bold; color: #c01b00; padding: 122px 0 0 296px; }
+.blk-appStepDec span {  display: block; }
+.ul-appStepDec { margin: 5px 0 0 356px; letter-spacing: 1px;}
+.step01 .ul-appStepDec { margin: 155px 0 0 356px; }
+.ul-appStepDec .ul-appStepDecInn li { list-style-type: decimal; margin-left: 24px; }
+.img-bg {  border: 1px solid #555; margin: 0 auto;  }
+.blk-imgs section { margin-bottom: 40px; }
+
+/*HelpCenter-appInstall- appAuth*/
+.blk-appAuth { padding: 100px 0 0 400px; }
+.txt-appNotice { color: #c01b00; font-size: 16px; font-weight: bold; letter-spacing: 1px; }
+.txt-appAct { display: inline-block; width: 167px; margin-left: -10px; letter-spacing: 0px; }
+.txt-appNotice.notice-c { display: block; padding: 0 0 15px; }
+.txt-appNotice.notice-d { display: block;  padding-top: 20px;}
+.panel-appInfo-a, .panel-appInfo-b { font-size: 16px; font-weight: bold; }
+.panel-appInfo-a {  }
+.panel-appInfo-b { display: none; }
+.txt-appAct.actPreLogin { width: 200px; padding-left: 10px;}
+.panel-appInfo-a label { letter-spacing: 0px; }
+/*===================================================================================================================*/
+/*                                                      Footer                                                       */
+/*===================================================================================================================*/
+.reg-footer { margin: 30px 0;}
+/* reg-footer > */
+.are-copyright {padding: 34px 0 36px 0;text-align: center;}
+/* reg-footer > are-copyright > */
+.blk-logo { width: 996px; margin: 0 auto; background-color: #0c0b0b;}
+.blk-copyright { padding-top: 10px; font-size: 12px; color: #646464; text-align:center;}
+.blk-copyright p { display: inline-block; }
+/* reg-footer > are-copyright > blk-logo > */
+.ul-logo { text-align: center; }
+.ul-logo > li { height: 56px; background: no-repeat center; margin: 0 12px; }
+.ul-logo > li.li-logo1 { width: 154px; background-image: url(../images/footer/footer_logo1.png); }
+.ul-logo > li.li-logo2 { width: 60px; background-image: url(../images/footer/footer_logo2.png); }
+.ul-logo > li.li-logo3 { width: 100px; background-image: url(../images/footer/footer_logo3.png); }
+.ul-logo > li.li-logo4 { display: none; width: 61px; background-image: url(../images/footer/footer_logo4.png); }
+.ul-logo > li.li-logo5 { width: 100px; background-image: url(../images/footer/footer_logo5.png); }
+.ul-logo > li.li-logo6 { width: 55px; background-image: url(../images/footer/footer_logo6.png); }
+/* reg-footer > are-copyright > blk-logo > */
+.txt-copyright,
+.txt-browse { letter-spacing: 1px;}
+
+/*===================================================================================================================*/
+/*                                                     Z-index                                                       */
+/*===================================================================================================================*/
+.ui-li-step1 { z-index: 4;}
+.ui-li-step2 { z-index: 3;}
+.ui-li-step3 { z-index: 2;}
+.ui-li-step4 { z-index: 1;}
+.are-lang { z-index: 1;}
+
+/*===================================================================================================================*/
+/*                                                       Hack                                                        */
+/*===================================================================================================================*/
+
+.blk-game { width:132px; height: 38px;}
+.game-A01 { background: url(../images/mobile/icon_A1.png) no-repeat center;}
+.game-A02 { background: url(../images/mobile/icon_A2.png) no-repeat center;}
+.game-A03 { background: url(../images/mobile/icon_A3.png) no-repeat center;}
+.game-A04 { background: url(../images/mobile/icon_A4.png) no-repeat center;}
+.game-A05 { background: url(../images/mobile/icon_A5.png) no-repeat center;}
+.game-A06 { background: url(../images/mobile/icon_A6.png) no-repeat center;}
+.game-A08 { background: url(../images/mobile/icon_A8.png) no-repeat center;}
+
+.txt-red {color: #c59033; }
+

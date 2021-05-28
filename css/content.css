@@ -1,0 +1,47 @@
+@charset "utf-8";
+
+
+/*存取款幫助*/
+.help-content { padding: 20px 0 0 0; width: 800px; margin-left: auto; margin-right: auto; position: relative; }
+.helpPic { width: 355px; height: 430px; background: url(imgs/content/helpPic02.png) right center no-repeat; position: absolute; right: 0; bottom: 5px; }
+.helpPic02 { width: 400px; height: 370px; background: url(imgs/content/helpPic.png) right center no-repeat; float: right; margin-top: 10px; margin-left: 50px; }
+.help-content h2 { font-size: 15px; color: #ff9103; font-weight: bold; }
+.help-content ul { margin-bottom: 10px; }
+.help-content li { list-style-type: circle; margin-left: 20px; font-size: 13px; color: #fff; line-height: 200%; }
+.help-content2 h2 { font-size: 18px; color: #ff9103; font-weight: bold; margin-bottom: 6px; }
+.help-content2 h3 { font-size: 15px; color: #ff9103; font-weight: bold; margin-bottom: 3px; }
+.help-content2 ul { margin-bottom: 10px; }
+.help-content2 li { list-style-type: circle; margin-left: 20px; font-size: 13px; color: #fff; line-height: 200%; }
+.paper { position: absolute; left: 45%; top: 45%; font-size: 22px; color: #333; font-family: "Microsoft YaHei", Arial, Helvetica, sans-serif; letter-spacing: 0.05em; }
+
+/* mobileHelp */
+.ui-h3-mobileNotice { display: inline; background-color: #4b4b4b; color: #fdfdfd; font-weight: normal; }
+.ui-ul-mobilePages { background: #252525;
+background: -moz-linear-gradient(top, #252525 0%, #252525 49%, #111111 50%, #262626 100%); 
+background: -webkit-linear-gradient(top, #252525 0%,#252525 49%,#111111 50%,#262626 100%); 
+background: linear-gradient(to bottom, #252525 0%,#252525 49%,#111111 50%,#262626 100%); ; height: 104px; border-radius: 15px 15px 0 0; -moz-border-radius: 15px 15px 0 0; -ms-border-radius: 15px 15px 0 0; }
+.ui-li-mobilePages { float: left; }
+.ui-li-mobilePages-01 { border-radius: 15px 0 0 0; -moz-border-radius: 15px 0 0 0; -ms-border-radius: 15px 0 0 0; }
+.ui-li-mobilePages-06 { border-radius: 0 15px 0 0; -moz-border-radius: 0 15px 0 0; -ms-border-radius: 0 15px 0 0; }
+.ui-li-mobilePages:hover { background-color: #555; }
+.ui-lnk-mobilePages { line-height: 18px; display: block; width: 200px; height: 42px; background: no-repeat center 20px; padding-top: 62px; border-right: 1px solid #3f3f3f; color: #fff; font-size: 14px; text-align: center; }
+.ui-li-mobilePages-active { background-color: #555; }
+.ui-li-mobilePages-01.ui-li-mobilePages-active, .ui-li-mobilePages-01 > .ui-lnk-mobilePages { background: url(../images/ui/mobilePages01.png) no-repeat center 20px; }
+.ui-li-mobilePages-02.ui-li-mobilePages-active, .ui-li-mobilePages-02 > .ui-lnk-mobilePages { background-image: url(../images/ui/mobilePages02.png); }
+.ui-li-mobilePages-03.ui-li-mobilePages-active, .ui-li-mobilePages-03 > .ui-lnk-mobilePages { background-image: url(../images/ui/mobilePages03.png); }
+.ui-li-mobilePages-04.ui-li-mobilePages-active, .ui-li-mobilePages-04 > .ui-lnk-mobilePages { background-image: url(../images/ui/mobilePages04.png); border-right: none;  }
+.ui-ul-mobileSteps { margin: 10px; }
+.ui-li-mobileSteps { margin: 0 5px; float: left; }
+.ui-lnk-mobileSteps { display: block; width: 24px; background: url(../images/ui/mobileStepsBg.png) no-repeat; color: #fff; font-size: 16px; text-align: center; line-height: 24px; cursor: pointer;}
+.ui-li-mobileSteps-active > .ui-lnk-mobileSteps { background: url(../images/ui/mobileStepsActiveBg.png); cursor: text; }
+.ui-lnk-mobileSteps-previous, .ui-lnk-mobileSteps-next { display: block; width: 22px; height: 57px; background: url(../images/ui/mobileStepsArrow.png) no-repeat; margin-top: -28.5px; position: absolute; top: 40%; }
+.ui-lnk-mobileSteps-previous { background-position: left top; left: 190px; }
+.ui-lnk-mobileSteps-next { background-position: -22px top; right: 25px; }
+.ui-h3-mobileSteps-title { color: #fff; font-size: 16px; }
+.ui-txt-mobile-mask { color: #c59033; }
+
+/* mobileHelp */
+.theme-mobileHelp { padding-bottom: 20px; border: 1px solid #3f3f3f; border-radius: 15px; -moz-border-radius: 15px; -ms-border-radius: 15px; }
+.theme-mobileHelp-body { min-height: 57px; padding: 10px 42px; position: relative; margin-bottom: 30px; top: 30px; }
+.theme-mobileHelp-contentArea { line-height: 25px; }
+.theme-mobileHelp-contents { color: #fff; }

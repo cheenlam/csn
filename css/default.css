@@ -1,0 +1,211 @@
+﻿@charset "utf-8";
+/* CSS Document */
+html {  font-family: sans-serif;  -ms-text-size-adjust: 100%;  -webkit-text-size-adjust: 100%;}
+body,div,dl,dt,dd,ul,ol,li,h1,h2,h3,h4,h5,h6,pre,code,form,fieldset,legend,input,textarea,p,blockquote,th,td{margin:0;padding:0;}
+body { line-height: 1; }
+small {  font-size: 80%;}
+mark {  background: #ff0;  color: #000;}
+fieldset { border: 1px solid #c0c0c0; margin: 0 2px;  padding: 0.35em 0.625em 0.75em;}
+figure {  margin: 1em 40px;}
+svg:not(:root) {  overflow: hidden;}
+img{border:0; vertical-align: middle; }
+hr {  -moz-box-sizing: content-box;  box-sizing: content-box;  height: 0;}
+address,caption,cite,code,dfn,em,strong,th,var{font-style:normal;font-weight:normal;}
+ol, ul {list-style: none;}
+table { border-collapse: collapse;  border-spacing: 0;}
+td,th {  padding: 0;}
+optgroup {  font-weight: bold;}
+caption,th{text-align:left;}
+h1,h2,h3,h4,h5,h6{font-size:100%;font-weight:normal;}
+blockquote, q {quotes: none;}
+blockquote:before, blockquote:after,q:before, q:after {    content: '';    content: none;}
+abbr,acronym {border:0;font-variant:normal;}
+abbr[title] {  border-bottom: 1px dotted;}
+sub,sup {  font-size: 75%;  line-height: 0;  position: relative;  vertical-align: baseline;}
+sup {  top: -0.5em;}
+sub {  bottom: -0.25em;}
+input,textarea,select{font-family:inherit;font-size:inherit;font-weight:inherit;}
+legend{color:#000;}
+pre,code,kbd,samp,tt{font-family:monospace;*font-size:108%;line-height:100%}
+pre {  overflow: auto;}
+ins {text-decoration: none;}
+del {text-decoration: line-through;}
+table {font-size:inherit;font:100%;}
+code,kbd,pre,samp {  font-family: monospace, monospace;  font-size: 1em;}
+button,textarea,select,optgroup,option{font-family:inherit;font-size:inherit;font-style:inherit;font-weight:inherit;}
+button,input,optgroup,select,textarea {  color: inherit;  font: inherit;  margin: 0; /* 3 */}
+button,html input[type="button"], input[type="reset"],input[type="submit"] {  -webkit-appearance: button; cursor: pointer;}
+button,select {  text-transform: none;}
+button {  overflow: visible;}
+input,button,textarea,select{*font-size:100%;  }
+button[disabled],html input[disabled] {  cursor: default;}
+button::-moz-focus-inner,input::-moz-focus-inner {  border: 0;  padding: 0;}
+input {  line-height: normal;}
+input[type="reset"],button,input[type="submit"]{cursor: pointer;}
+input[type="search"] { -webkit-appearance: textfield;-moz-box-sizing: content-box; -webkit-box-sizing: content-box; box-sizing: content-box;}
+input[type="search"]::-webkit-search-cancel-button,input[type="search"]::-webkit-search-decoration {  -webkit-appearance: none;}
+input[type="number"]::-webkit-inner-spin-button,input[type="number"]::-webkit-outer-spin-button {  height: auto;}
+input[type="checkbox"],input[type="radio"] {  box-sizing: border-box; padding: 0; }
+button {border: none;background: transparent none;}
+textarea {  overflow: auto;}
+legend {  border: 0; padding: 0;}
+.placeholder { color: #fff; }
+
+/* 鏈接 */
+a:focus { outline: thin dotted;}
+a{text-decoration: none; cursor:hand; background: transparent;}
+a:active,a:hover {text-decoration:none; cursor:hand;  outline: 0;}
+
+
+/* =============================================================================
+   HTML5 顯示定義
+   ========================================================================== */
+article,aside,details,figcaption,figure,footer,header,hgroup,nav,section,summary {    display: block;}
+audio,canvas,video {    display: inline-block;    *display: inline;    *zoom: 1;}
+audio:not([controls]) {    display: none;    height: 0;}
+[hidden],template {  display: none;}
+address{ font-style: normal; }
+/*----------------------------------------------------------------------------*/
+/* 基本設定
+------------------------------------------------------------------------------*/
+
+/* fonts
+---------- */
+b,strong {  font-weight: bold;}
+h1 {font-size: 2em;}
+h2 {font-size: 1.5em;}
+h3 {font-size: 1.17em;}
+h4 {font-size: 1em;}
+h5 {font-size: 0.83em;}
+h6 {font-size: 0.75em;}
+
+
+.tNum{ font-family: "Tahoma"; font-size: 16px; }
+.tDate{ font-family: Verdana, Geneva, sans-serif; font-size: 10px ;-webkit-text-size-adjust:none; }
+.t_red{ color: #FF0000 !important; }
+.tGreen{ color: #48E70A!important; }
+.tBlue{ color: #003ecb!important; }
+.tGrey{ color: #999!important; }
+.tQrange{ color: #ED5700!important; }
+.tPink{ color: #eb50e2!important; }
+/* hack
+---------- */
+
+/* 避免無空格的長文拉寬畫面 */
+td.code , td.quote {display: block !important;overflow: auto !important}
+
+/* 兩邊等高*/
+html[xmlns] .clearfix{	display: block;} 
+.clearfix:after { content: "."; display: block; clear: both; : hidden;	line-height: 0; height: 0; visibility: hidden; } 
+.clearfix{	display: inline-block;} 
+* html .clearfix {	height: 1%;}
+
+/* 兩邊等高-li*/
+html[xmlns] .clearfix_ul {	display: block;} 
+.clearfix_ul li:after{ content: "."; display: block; clear: both; : hidden;	line-height: 0; height: 0; visibility: hidden; } 
+.clearfix_ul li {	display: inline-block;} 
+* html .clearfix_ul {	height: 1%;}
+
+
+/*自動100%撐開*/
+.auto { overflow: hidden; zoom: 1; }
+.auto .left { float: left; }
+.auto .right { overflow: hidden; zoom: 1; }
+
+/*靠左右*/
+.fl {	float: left !important;}
+.fr {	float: right !important;}
+
+/*寬度*/
+.w5{width: 4%;}
+.w10{width: 9%;}
+.w15{width: 14%;}
+.w20{width: 19%;}
+.w21{width: 21%;}
+.w25{width: 24%;}
+.w30{width: 29%;}
+.w35{width: 44%;}
+.w40{width: 39%;}
+.w45{width: 44%;}
+.w50{width: 49%;}
+.w55{width: 54%;}
+.w60{width: 59%;}
+.w65{width: 64%;}
+.w68{width: 65%;}
+.w70{width: 69%;}
+.w71{width: 70%;}
+.w75{width: 74%;}
+.w80{width: 79%;}
+.w85{width: 84%;}
+.w90{width: 89%;}
+.w95{width: 94%;}
+.w99{width: 98%;}
+.w100{width: 99%;}
+
+.no{ border-top-style: none!important; border-right-style: none!important; border-bottom-style: none!important; border-left-style: none !important; }
+/*清除兩邊*/
+.clear { clear: both; }
+/*無障礙*/
+#quickkeyU { visibility: hidden; height: 0px; width: 0px; font-size: 0px; }
+/*靠齊*/
+.tcenter { text-align: center; }
+.tRight{ text-align: right; }
+.tLeft{ text-align: left;}
+
+/*表格*/
+.rowElem { overflow: hidden; zoom: 1; margin-bottom: 12px; line-height: 1.5em; font-size: 14px; }
+.rowElem::after {content: ".";display: block;height: 0;clear: both;visibility: hidden;}
+.rowElem .formRight { overflow: hidden; zoom: 1; margin-left: 0px; }
+.rowElem > label,.rowElem .fl > label,.rowElem .fr > label{ float: left;}
+.rowElem.noborder{margin-top: 10px;}
+
+/*隱藏*/
+.hidden { display: none; }
+.radius {
+	-moz-border-radius: 5px; /* Firefox */
+  	-webkit-border-radius: 5px; /* Safari, Chrome */
+  	border-radius: 5px; /* Opera 10.50 and later (CSS3 standard) */}
+.radiusTop {
+	-moz-border-radius: 5px 5px 0 0; /* Firefox */
+  	-webkit-border-radius: 5px 5px 0 0; /* Safari, Chrome */
+  	border-radius: 5px 5px 0 0; /* Opera 10.50 and later (CSS3 standard) */}
+.radiusLeft {
+	-moz-border-radius: 5px 0 0 5px; /* Firefox */
+  	-webkit-border-radius: 5px 0 0 5px; /* Safari, Chrome */
+  	border-radius: 5px 0 0 5px; /* Opera 10.50 and later (CSS3 standard) */}
+.radiusRight {
+	-moz-border-radius: 0 5px 5px 0; /* Firefox */
+  	-webkit-border-radius: 0 5px 5px 0; /* Safari, Chrome */
+  	border-radius: 0 5px 5px 0; /* Opera 10.50 and later (CSS3 standard) */}
+.inlineblock{ display: inline-block; *display : inline;*zoom : 1;  }
+.box-shadow{ box-shadow: 0px 2px 3px #CCC;}
+
+/*共用*/
+
+	/*定位*/
+	.tdbot { vertical-align:bottom;}
+	.tdtop { vertical-align:top;}
+	.tdnowrap {white-space:nowrap;}
+	.clear { clear:both;}
+
+	/*彈跳視窗內容區*/
+	.run { padding:13px 5px 15px 0; color:#FFF; float:right; width:605px;}
+		.run a{ color:#FFF; text-decoration:none; font-size:0.8em;}
+	.more_lct { float:right; width:39px; padding-right:10px;}
+	.more { background:url(imgs/news/more.png) no-repeat; width:39px; height:20px; border:0px; margin-top:12px; cursor:pointer;}
+	
+	.boxtable2 { padding:15px; font-size:15px; color:#333; line-height:200%;}
+	.boxtable2 h2{ background:url(imgs/default/boxtitle.png) left center no-repeat;  padding:5px 0 5px 38px; font-size:22px; font-weight:bold; border-bottom:1px solid #000; margin-bottom:5px; color:#000 }
+	.boxred{ font-weight:bold; color:#ee0000;}
+	.boxtable2 ul li{ list-style: decimal; margin-left:30px;}
+
+/*頁碼*/
+.pagebtn { clear: both; width:100%; margin-top: 20px; text-align: center; padding-bottom: 20px; color:#fff;}
+.pagebtn span  {  display: inline-block;  margin-right: 5px; padding-left:3px; padding-right:3px;}
+.pagebtn a{background: url(imgs/default/btnS_hover.png) left top no-repeat; color:#fff; width:85px; line-height:25px; display:inline-block; padding-left:5px; margin-right:5px;}
+.pagebtn a:hover span {color: #ffc600;}
+
+	
+
+ 	/*網內轉帳下拉選單-暫用*/
+    	.s123 { background-color:#000; color:#FFF; border:1px #bfae86 solid; width:110px;}

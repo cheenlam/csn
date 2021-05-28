@@ -1,0 +1,38 @@
+@charset "utf-8";
+body { background: url(imgs/event/mainBg.jpg) center repeat-y; }
+.content { width: 890px; margin: 20px auto; min-height: 452px; position: relative; font-family: "Microsoft YaHei", Arial, Helvetica, sans-serif; }
+
+/*Event*/
+.eventann p { clear: both; font-size: 13px; color: #fff; line-height: 180%; margin: 2% 5% 0% 5%; }
+.eventann h2 { background: url(imgs/event/eventtitle.png) center no-repeat; width: 151px; height: 36px; margin-left: 10px; color: #fff; margin-top: 30px; font-size: 15px; text-align: center; line-height: 36px; }
+.eventann ul { list-style-type: disc; padding-top: 10px; margin-left: 60px; }
+.eventann li { font-size: 13px; color: #fff; line-height: 170%; padding-top: 7px }
+.eventann li a { margin-left: 5px; color: #fff; background-color: #640010; padding: 5px 10px 7px; border-radius: 7px; text-decoration: underline; letter-spacing: 1px; }
+.eventann li a:hover { background-color: #e0b600; color: #000;}
+.eventann ol { list-style-type: decimal-leading-zero; margin-left: 20px; padding-top: 10px; margin-left: 65px; }
+.eventser { text-align: center; margin-top: 30px; padding-bottom: 10px; }
+
+.eventposter { padding-left: 20%; }
+.eventann img { height: auto; margin: 0 auto; }
+.eventlist { width: 890px; height: 32px; text-align: center; color: #333; font-size: 15px; border-radius: 5px; margin: 0 auto 20px; }
+.eventlist a { color: #FFF; font-size: 15px; text-decoration: none; background: url(imgs/event/selbtn.png) left top no-repeat; width: 110px; height: 36px; display: inline-block; line-height: 33px; cursor: pointer; }
+.eventlist a:hover, .eventlist a.active:hover { color: #f6ac19; }
+.eventlist a.active { background: url(imgs/event/selbtn.png) left bottom no-repeat; color: #fff; text-decoration: none; }
+#Grid { width: 890px; margin-left: auto; margin-right: auto; clear: both; padding-bottom: 20px; }
+#Grid .mix { position: relative; float: left; display: none; opacity: 0; border: 2px #501010 solid; width: 890px; height: 109px; margin-bottom: 7px; }
+#Grid .mix:hover { display: block; border: 2px #ff9103 solid; width: 890px; height: 109px; }
+#Grid .mix .btn { line-height: 25px; display: inline-block; _display: inline; background-color: #b7660b; color: #FFF; border: 0px; padding: 1px 10px; text-align: center; text-decoration: none; position: absolute; right: 10px; bottom: 10px; border: 1px solid #efc825; -moz-border-radius: 5px; -webkit-border-radius: 5px; border-radius: 5px; font-size: 13px; }
+#Grid .mix:hover .btn { background: #fcb539; }
+#Grid .gap { display: inline-block; width: 420px; }
+.eventTable { clear: both; width: 80%; font-size: 13px; margin: 3% 0%; }
+.eventTable.In { margin: 3% 0; }
+.eventTable th { background: #c38b2c; padding: 10px; border: 1px solid #daae65; color: #000; text-align: center; white-space: nowrap; font-weight: bold; }
+.eventTable td { padding: 5px 10px; border: 1px solid #555; line-height: 150%; white-space: nowrap; background: #bebebe; color: #000; text-align: center; }
+.eventTable .td-1st { text-align: left; }
+.eventann ul.ul-event { margin-left: 10px; }
+.eventTable-li { margin: 3% 0; }
+table.eventTable-li { margin: 3% auto; }
+
+.eventTable .td-ink{ background: linear-gradient(to bottom, #252525 0%,#252525 49%,#111111 50%,#262626 100%); color: #fff; padding: 10px; }
+
+
