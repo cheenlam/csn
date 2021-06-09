@@ -18,8 +18,6 @@ let sortData = {
 $(document).ready(function() {
     localStorage.setItem("lang", "TW")
     mainInclude('page/main.html')
-
-    mainInclude('page/egt1_1.html')
     sortList(0)
 });
 
