@@ -216,8 +216,12 @@ img{
 .pageStep ul{
     display: flex;
     background: linear-gradient(to bottom, #252525 0%,#252525 49%,#111111 50%,#262626 100%);
-   
 }
+
+.pageStep ul[data-num="1"] li:nth-child(4){
+    display: none;
+}
+
 
 .pageStep li{
     width: 100%;
@@ -232,9 +236,19 @@ img{
     transition: .5s;
 }
 
-.pageStep li.hidden{
+.pageStep li section{
     display: none;
 }
+
+.pageStep ul[data-num="0"] li section:nth-child(1){
+    display: block;
+}
+
+.pageStep ul[data-num="1"] li section:nth-child(2){
+    display: block;
+}
+
+
 
 .pageStep li.on,
 .pageStep li:hover{

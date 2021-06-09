@@ -46,9 +46,12 @@ $('#menu li').click(function() {
     mainInclude(`page/${menuData[sel]}1_1.html`);
 
     if(sel == 2){
-        $('#pageStep li:eq(3)').addClass('hidden')
+        // $('#pageStep li:eq(3)').addClass('hidden')
+        $('#pageStep ul').attr('data-num','1')
+
     }else{
-        $('#pageStep li:eq(3)').removeClass('hidden')
+        // $('#pageStep li:eq(3)').removeClass('hidden')
+        $('#pageStep ul').attr('data-num','0')
     }
 })
 
