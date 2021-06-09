@@ -1,116 +1,105 @@
-<!doctype html>
-<html>
+<!DOCTYPE html>
+<html lang="en">
 
 <head>
-    <meta charset="utf-8" />
-    <meta name="viewport" content="width=1280" />
-    <meta http-equiv="X-UA-Compatible" content="IE=10,chrome=1" />
-    <meta name="description" content="CASINO ONLINE Entertainment" />
-    <meta name="keywords" content="CASINO" />
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="images/icon/favicon.ico" type="image/x-icon" />
+    <link rel="stylesheet" href="css/reset.css">
+    <link rel="stylesheet" href="css/all.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+    <script src="https://unpkg.com/vue-i18n/dist/vue-i18n.js"></script>
     <title>CSN遊戲機台說明</title>
-    <link rel="shortcut icon" href="images/favicon/favicon.ico" type="image/x-icon" />
-    <link href="css/normalize.css" rel="stylesheet" type="text/css" />
-    <link href="css/layout.css" rel="stylesheet" type="text/css" />
-    <link href="css/mobileHelp-index.css" rel="stylesheet" type="text/css" />
-    <link href="css/content.css" rel="stylesheet" type="text/css" />
-    <script type="text/javascript" src="js/jquery-1.8.3.min.js"></script>
 </head>
 
 <body>
-    <div class="lay-container" id="index">
-        <!--header-->
-        <header class="reg-header">
-            <div class="lay-screen">
-                <a class="cpn-inBlock lnk-logo" href="index.html">{0}</a>
-                <h1 class="cpn-boxzero cpn-inBlock h1-pageTitle">遊戲機台說明</h1>
-                <div class="are-lang">
-                    <a href="../zh-cn/index.html" class="lnk-lang">
-                        <span class="cpn-inBlock bg-lang bg-lang-tw"></span> 繁體中文
-                        <span class="cpn-inBlock bg-lang-arrow"></span>
-                    </a>
-                    <ul class="cpn-boxzero ul-lang">
+    <!-- ========== header start ========== -->
+    <div class="header">
+        <div class="hd_Lang" id="hd_Lang">
+            <div class="hd_langSel" data-lang="TW" id="langSel">繁體中文</div>
+            <ul>
+                <li data-lang="EN">English</li>
+            </ul>
+        </div>
+        <div class="hd_main">
+            <div class="hd_logo" id="hd_logo">
+                <img src="images/header/logo.png" alt="csnLogo">
+            </div>
+            <div class="hd_title txtRsc" data-tid="hd.title">遊戲機台說明</div>
+        </div>
+    </div>
+
+    <!-- ========== content start ========== -->
+    <div class="content">
+
+        <!-- menu start -->
+        <div class="menu" id="menu">
+            <ul>
+                <li class="txtRsc on" data-tid="menu.list01">柏青斯洛</li>
+                <li class="txtRsc" data-tid="menu.list02">15輪</li>
+                <li class="txtRsc" data-tid="menu.list03">EGT</li>
+            </ul>
+        </div>
+
+        <!-- pageBox start -->
+        <div class="pageBox">
+            <div class="sortBar" id="sortBar">
+                <ul></ul>
+            </div>
+
+            <div class="pageCont">
+                <div class="pageStep" id="pageStep">
+                    <ul>
+                        <li class="on">
+                            <div class="stepImg">
+                                <img src="images/ui/mobilePages01.png">
+                            </div>
+                            <span data-tid="stepTitle.step01" class="txtRsc">機台介紹</span>
+                        </li>
                         <li>
-                            <a href="../en-us/index.html" class="lnk-lang">
-                                <span class="cpn-inBlock bg-lang bg-lang-en"></span> English
-                            </a>
+                            <div class="stepImg">
+                                <img src="images/ui/mobilePages02.png">
+                            </div>
+                            <span data-tid="stepTitle.step02" class="txtRsc">機率概述</span>
+                        </li>
+                        <li>
+                            <div class="stepImg">
+                                <img src="images/ui/mobilePages03.png">
+                            </div>
+                            <span data-tid="stepTitle.step03" class="txtRsc">操作手冊</span>
+                        </li>
+                        <li>
+                            <div class="stepImg">
+                                <img src="images/ui/mobilePages04.png">
+                            </div>
+                            <span data-tid="stepTitle.step04" class="txtRsc">流程說明</span>
                         </li>
                     </ul>
                 </div>
-            </div>
-        </header>
-        <!--main-->
-        <div class="reg-main">
-            <div class="lay-screen">
-                <div class="cpn-inBlock-row">
-                    <div class="cpn-inBlock-cell are-pageNav">
-                        <ul class="cpn-boxzero ui-ul-pageNav">
-                            <li class="li-active"><a href="cn-slot-JC-page1.html">柏青斯洛</a></li>
-                            <li><a href="15W.html">15輪</a></li>
-                            <li><a href="EGT.html">EGT</a></li>
-                        </ul>
-                    </div>
-                    <div class="cpn-inBlock-cell theme-content are-content">
-                        <div class="blk-steps">
-                            <ul class="cpn-boxzero cpn-inBlock-row ui-ul-steps">
-                                <li class="ui-li-step ui-li-step1">
-                                    <a href="cn-slot-JC-page1.html" class="ui-lnk-step">吉宗</a>
-                                </li>
-                                <!--                                 <li class="ui-li-step ui-li-step2">
-                                    <a href=".bg-step2" class="ui-lnk-step">超悟空</a>
-                                </li> -->
-                                <li class="ui-li-step ui-li-step3">
-                                    <a href=".bg-step3" class="ui-lnk-step">南國育</a>
-                                </li>
-                                <li class="ui-li-step ui-li-step3">
-                                    <a href=".bg-step3" class="ui-lnk-step">北斗之拳</a>
-                                </li>
-                            </ul>
-                        </div>
-                        <!--content-->
-                        <div class="theme-mobileHelp">
-                            <ul class="cpn-boxzero cpn-inBlock-row ui-ul-mobilePages">
-                                <li class="ui-li-mobilePages ui-li-mobilePages-01">
-                                    <a href="cn-slot-JC-page1.html" class="ui-lnk-mobilePages">機台介紹</a>
-                                </li>
-                                <li class="ui-li-mobilePages ui-li-mobilePages-02">
-                                    <a href="cn-slot-JC-page2.html" class="ui-lnk-mobilePages">機率概述</a>
-                                </li>
-                                <li class="ui-li-mobilePages ui-li-mobilePages-03">
-                                    <a href="cn-slot-JC-page3.html" class="ui-lnk-mobilePages">操作手冊</a>
-                                </li>
-                                <li class="ui-li-mobilePages ui-li-mobilePages-04">
-                                    <a href="cn-slot-JC-page4.html" class="ui-lnk-mobilePages">流程說明</a>
-                                </li>
-                            </ul>
-                            <div class="theme-mobileHelp-body">
-                                <div class="theme-mobileHelp-contentArea">
-                                    <section class="theme-mobileHelp-contents blk-content-01">
-                                        <div class="bg-mobile"></div>
-                                        <div class="panel-mobile-desc">
-                                            <h4 class="ui-txt-mobile-mask h4-mobile-title">遊戲機台說明</h4>
-                                            <p class="txt-mobile-desc">點選網頁”機台說明”選項</p>
-                                        </div>
-                                    </section>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
+                <!-- pageInclude start -->
+                <div class="pageInclude" id="pageInclude">
                 </div>
-                <!--footer-->
-                <footer class="reg-footer">
-                    <div class="lay-screen">
-                        <div class="cpn-inBlock-row are-copyright">
-                            <div class="cpn-inBlock-cell blk-copyright">
-                                <p class="cpn-boxzero txt-copyright">Copyright © 2021 開喜樂國際 CSN Casino Games Co., Ltd. All rights reserved.</p>
-                                <p class="cpn-boxzero txt-browse">最佳浏览解析1024*768 / IE8+ / Flash V9+</p>
-                            </div>
-                        </div>
-                    </div>
-                </footer>
             </div>
-            <script type="text/javascript" src="js/design_lang.js"></script>
         </div>
+
     </div>
+
+    <!-- ========== footer start ========== -->
+    <div class="footer">
+        <p>Copyright © 2021 開喜樂國際 CSN Casino Games Co., Ltd. All rights reserved.</p>
+        <p>最佳浏览解析1024*768 / IE8+ / Flash V9+</p>
+
+    </div>
+
+    <script>
+        
+
+    </script>
+    <script src="js/leanData.js"></script>
+    <script src="js/main.js"></script>
+
 </body>
 
 </html>

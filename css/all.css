@@ -1,0 +1,498 @@
+body{   
+    color: #fff;
+    background:#000  url(../images/cntrBg.jpg) no-repeat center /cover;
+}
+
+body::-webkit-scrollbar {
+    display: none;
+}
+
+img{
+    width: 100%;
+    vertical-align: middle;
+}
+
+.fl{
+    display: flex;
+}
+
+.f2{
+    display: flex;
+    justify-content: center;
+}
+
+/* ========== header start ========== */
+.header{
+    width: 100%;
+    max-width: 996px;
+    padding: 10px 10px 20px;
+    margin: auto;
+    display: flex;
+    flex-direction: column;
+}
+
+.hd_Lang{
+    width: 100px;
+    font-size: 0.95rem;  
+    align-self: flex-end;
+    position: relative;
+}
+
+.hd_Lang ul{
+    width: 100%;
+    position: absolute;
+    top: 30px;
+    transform-origin: top center;
+    transform: rotateX(90deg);
+}
+
+.hd_Lang:hover ul{
+    transform: rotateX(0deg);
+    transition: .5s;
+}
+
+.hd_Lang li,
+.hd_langSel{
+    height: 30px;
+    line-height: 30px;
+    padding-right: 5px;
+    position: relative;
+    transition: .5s;
+    text-align: right;
+}
+
+.hd_Lang li:hover,
+.hd_langSel:hover{
+    background-color: #555;
+}
+
+.hd_Lang li::before,
+.hd_langSel::before{
+    content: '';
+    width: 19px;
+    height: 19px;
+    margin: auto;
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 5px;
+}
+.hd_Lang li[data-lang="TW"]::before,
+.hd_langSel[data-lang="TW"]::before{
+    background: url(../images/header/lang_iconTw.jpg) no-repeat center/ cover;
+}
+
+.hd_Lang li[data-lang="EN"]::before,
+.hd_langSel[data-lang="EN"]::before{
+    background: url(../images/header/lang_iconEn.jpg) no-repeat center/ cover;
+}
+
+.hd_Lang li[data-lang="TH"]::before,
+.hd_langSel[data-lang="TH"]::before{
+    background: url(../images/header/lang_iconTh.jpg) no-repeat center/ cover;
+}
+
+.hd_main{
+    display: flex;
+    align-items: center;
+}
+
+.hd_logo{
+    width: 234px;
+}
+
+.hd_title{
+    padding: 24px 0 0 20px;
+    font-size: 1.8rem;
+    font-weight: bold;
+    letter-spacing: 2px;
+}
+
+/* ========== content start ========== */
+.content{
+    width: 100%;
+    max-width: 996px;
+    min-height: calc(100vh - 228px);
+    margin: auto;
+    padding: 0 10px;
+    display: flex;
+}
+
+/* menu start */
+.menu{
+    width: 140px;  
+    padding-top: 30px;
+    margin-right: 25px;
+    flex-shrink: 0;
+}
+
+.menu li{
+    height: 32px;
+    line-height: 32px;
+    font-weight: bold;
+    letter-spacing: 1px;
+    background-color: #252525;
+    color: #c48f33;
+    font-size: 0.9rem;
+    text-align: center;
+    transition: .3s;
+    position: relative;  
+}
+
+.menu li.on{
+    background-color: #c48f33;
+    color: #000;
+}
+
+.menu li:hover{
+    color: #fff;
+}
+
+.menu li.on:hover{
+    color: #000;
+}
+
+.menu li+li::before{
+    content: '';
+    width: 139px;
+    height: 8px;
+    margin: auto;
+    background:url(../images/ui/pageNav_line.png) no-repeat center;
+    position: absolute;
+    top: -4px;
+    left: 0;
+    right: 0;
+}
+
+/* pageBox start */
+.pageBox{
+    width: 100%;
+}
+
+.sortBar ul{
+    padding-right: 22px;
+    display: flex;
+    justify-content: flex-end;
+    
+}
+
+.sortBar li{
+    width: 110px;
+    height: 25px;
+    line-height: 25px;
+    font-weight: bold;
+    letter-spacing: 1px;
+    text-align: center;
+    font-weight: bold;
+    background-image: url(../images/ui/step1.png);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    color: #000;
+    font-size: 0.9rem;
+    border-radius: 5px 5px 0 0;
+}
+
+
+.sortBar li:hover{
+    background-image: url(../images/ui/step1Hover.png);
+} 
+
+.sortBar li.on,
+.sortBar li:active{
+    background-image: url(../images/ui/step1Active.png);
+} 
+
+.sortBar li+li{
+    margin-left: 5px;
+}
+
+.pageCont{
+    border: 1px solid #3f3f3f;
+    border-radius: 15px;
+    overflow: hidden;
+}
+
+.pageStep ul{
+    display: flex;
+    background: linear-gradient(to bottom, #252525 0%,#252525 49%,#111111 50%,#262626 100%);
+   
+}
+
+.pageStep li{
+    width: 100%;
+    height: 104px;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    font-size: 0.9rem;
+    letter-spacing: 1px;
+    transition: .5s;
+}
+
+.pageStep li.hidden{
+    display: none;
+}
+
+.pageStep li.on,
+.pageStep li:hover{
+    background-color: #555;
+    box-shadow: 0px 0px 10px #999 inset;
+}
+
+.pageStep li+li::before{
+    content: '';
+    width: 1px;
+    height: 100%;
+    background-color: #3f3f3f;
+    position: absolute;
+    left: 0;
+    top: 0;
+}
+
+.stepImg{
+    margin-bottom: 10px;
+}
+
+/* pageInclude start */
+.pageInclude{
+    min-height: 600px;
+    padding: 30px 20px 100px;
+}
+
+.moduleTop{
+    height: 65px;
+    margin-bottom: 40px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.moduleTitle{
+    font-size: 1.1rem;
+    font-weight: bold;
+}
+
+.moduleTitle li{
+    display: none;
+}
+
+.moduleTitle li.on{
+    display: block;
+}
+
+.moduleBar ul{
+    padding-left: 45px;
+    display: flex;
+}
+
+.moduleBar li{
+    width: 25px;
+    height: 25px;
+    line-height: 25px;
+    text-align: center;
+    border-radius: 50%;
+    background-color: #686868;
+    box-shadow: 2px 2px 4px #fff inset;
+}
+
+.moduleBar li.on,
+.moduleBar li:hover{
+    background-color: #88611f;
+}
+
+.moduleBar li+li{
+    margin-left: 10px;
+}
+
+.moduleImg{
+    width: 233px;
+    flex-shrink: 0;
+}
+
+.moduleImg02{
+    width: 500px;
+    flex-shrink: 0;
+}
+
+.moduleMsg {
+    font-size: 0.9rem;
+    padding-left: 30px;
+    line-height: 22px;
+}
+
+.moduleMsgTitle{
+    padding-bottom: 30px;
+    font-weight: bold;
+    line-height: 35px;
+}
+
+.moduleMsgTitle span,
+.moduleMsg span{
+    color: #c59033;
+    font-weight: bold;
+}
+
+.moduleMsg ul{
+    color: #c59033;
+    list-style: decimal;
+    padding-left: 18px;
+}
+
+.moduleMsg>p,
+.moduleMsg li{
+    padding-bottom: 20px;
+    color: #fff;
+}
+
+.moduleMsg li.pm5{
+    padding: 0px;
+}
+
+
+
+.moduleMsg p{
+    color: #fff;
+}
+
+.module table{
+    width: 100%;
+    margin: 20px 0 50px;
+    border-top: 1px solid #333;
+    color: #000;
+}
+
+.module tr{
+    background-color: #bebebe;
+}
+
+.module tr+tr{
+    border-top: 1px solid #333;
+}
+
+.module th,
+.module td{
+    border-left: 1px solid #333;
+}
+
+.module th,
+.module td{
+    height: 45px;
+    line-height: 45px;
+    font-size: 0.9rem;
+    text-align: center;
+}
+
+.module th{   
+    font-weight: bold;
+}
+
+.module .bgc01{
+    color: #000;
+    background: #c38b2c;
+}
+
+.module .bgc02{
+    color: #fff;
+    background: linear-gradient(to bottom, #252525 0%,#252525 49%,#111111 50%,#262626 100%);
+}
+
+.module th{
+    color: #fff;
+    background: linear-gradient(to bottom, #252525 0%,#252525 49%,#111111 50%,#262626 100%);
+}
+
+.moduleArrow_L,
+.moduleArrow_R{
+    width: 22px;
+    height: 57px;
+    background-image: url(../images/ui/mobileStepsArrow.png);
+    background-repeat: no-repeat;
+    position: absolute;
+    top: 200px;
+    transition: .3s;
+}
+
+.moduleArrow_L:hover,
+.moduleArrow_R:hover{
+    transform: scale(1.2);
+}
+
+.moduleArrow_L{
+    left: 0;
+}
+
+.moduleArrow_R{
+    background-position: -22px;
+    right: 0;
+}
+
+.module .moduleIcon{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.moduleIcon img{
+    width: 132px;
+}
+
+.moduleIcon img+img{
+    margin-left: 5px;
+}
+
+.moduleBlock>li{
+    display: none;
+}
+
+
+
+.moduleCnt_01{
+   padding: 0 80px;
+   display: flex;
+}
+
+.moduleCnt_02{
+    padding: 0 80px;
+    display: flex;
+    justify-content: center;
+ }
+
+.moduleCnt_03{
+    padding: 0 80px;
+    position: relative;
+}
+
+
+.txt_red {color: #ff0606;}
+
+
+
+
+
+
+/* ========== footer start ========== */
+.footer{
+    width: 100%;
+    max-width: 996px;
+    margin: auto;
+    padding: 30px 10px;
+    font-size: 0.7rem;
+    color: #646464;
+    display: flex;
+    justify-content: center;
+}
+
+.footer p+p{
+    margin-left: 10px;
+}
+
+/* ========== 共用設定 ========== */
+/* 手指鼠標 */
+.pageStep li,.sortBar li,.menu li,
+.hd_logo,.hd_Lang,.moduleBar li,
+.moduleArrow_L,.moduleArrow_R{
+    cursor: pointer;
+}
