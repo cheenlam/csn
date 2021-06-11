@@ -1,59 +1,120 @@
 let menuSort = 0;
 let pageSort = 0;
+let findOn = 0
 let menuData = ["slot", "round", "egt"]
 let sortData = {
     "TW": [
         ["吉宗", "南國育", "北斗神拳"],
         ["15輪-1", "15輪-2"],
-        ["EGT-1"]
+        ["EGT"]
     ],
     "EN": [
         ["Gizong", "Nanguoyu", "Beidou"],
         ["15Rounds-1", "15Rounds-2"],
-        ["EGT-1"]
+        ["EGT"]
     ]
 }
 
 // 初始ready執行
 $(document).ready(function() {
     localStorage.setItem("lang", "TW")
-    mainInclude('page/main.html')
+    mainInclude('page/slot1_1.html')
     sortList(0)
 });
 
 // LOGO點擊事件
 $('#hd_logo').click(function() {
-    mainInclude('page/main.html')
+    mainInclude('page/slot1_1.html')
     sortList(0)
-
     menuSort = 0;
     pageSort = 0;
+    findOn = 0;
     $('#menu li,#pageStep li').removeClass('on')
     $('#menu li:eq(0),#pageStep li:eq(0)').addClass('on')
+    $('#pageStep ul').attr('data-num', '0')
 })
 
-// 分類切換
-$('#menu li').click(function() {
-    $('#menu li').removeClass('on')
-    $(this).addClass('on')
-    let sel = $('#menu li').index(this);
-    menuSort = sel;
 
-    sortList(sel)
-    $('#pageStep li').removeClass("on");
-    $('#pageStep li:eq(0)').addClass('on');
+$('#menu li').click(function(e) {
+    findOn = 0
+    $('#pageStep li').removeClass('on');
+    $('#pageStep li:eq(0)').addClass('on')
+    e.stopPropagation();
+    let pageStep;  
+    let jdm01 = $('#menu>ul>li').index(this);
 
-    mainInclude(`page/${menuData[sel]}1_1.html`);
+    $('#menu>ul>li').removeClass('on');
+    if (jdm01 != -1) {
+        pageStep = jdm01
+        menuSort = jdm01;
+        findOn = 0;
+        mainInclude(`page/${menuData[jdm01]}1_1.html`);
+        $(`#menu>ul>li:eq(${jdm01})`).addClass('on')
+        sortList(jdm01)
+    } else {
+        e.preventDefault();
+        let jdm02 = $('#menu>ul>li').index($(this).parents('li'));
+        let jdm03 = $('.minMenu li').index(this);
+        pageStep = jdm02
+        menuSort = jdm02;
+        findOn = jdm03;
+        mainInclude(`page/${menuData[jdm02]}${jdm03+1}_1.html`);
+        $(`#menu>ul>li:eq(${jdm02})`).addClass('on')
+        sortList(jdm02)
+    }
 
-    if(sel == 2){
-        // $('#pageStep li:eq(3)').addClass('hidden')
-        $('#pageStep ul').attr('data-num','1')
+    if (pageStep == 2) {
+        $('#pageStep ul').attr('data-num', '1')
 
-    }else{
-        // $('#pageStep li:eq(3)').removeClass('hidden')
-        $('#pageStep ul').attr('data-num','0')
+    } else {
+        $('#pageStep ul').attr('data-num', '0')
+    }
+    $('#menu').removeClass('on');
+})
+
+// 機台種類切換
+$('#sortBar').on("click", 'li', function() {
+    $('#sortBar li').removeClass('on');
+    $(this).addClass('on');
+    let index = $('#sortBar li').index(this);
+    $('#pageStep li').removeClass('on');
+    $('#pageStep li:eq(0)').addClass('on')
+    findOn = index
+    mainInclude(`page/${menuData[menuSort]}${findOn + 1}_1.html`);
+})
+
+// 步驟切換
+$('#pageStep li').click(function() {
+    $('#pageStep li').removeClass('on');
+    $(this).addClass('on');
+
+    let index = $('#pageStep li').index(this);
+    console.log(findOn)
+    mainInclude(`page/${menuData[menuSort]}${findOn + 1}_${index + 1}.html`);
+})
+
+// 小畫面hd按鈕點擊事件
+$('#hd_bar li').click(function() {
+    let index = $('#hd_bar li').index(this);
+    switch (index) {
+        case 0:
+            $('#hd_Lang').addClass('on');
+            break;
+        case 1:
+            $('#menu').addClass('on');
+            break;
+
     }
 })
+
+$('#menuClose').click(function() {
+    $('#menu').removeClass('on');
+})
+
+$('#hd_Lang').click(function() {
+    $('#hd_Lang').removeClass('on');
+})
+
 
 
 // 變更語系
@@ -96,31 +157,6 @@ function chLang() {
 }
 chLang()
 
-
-// 機台種類切換
-$('#sortBar').on("click", 'li', function() {
-    $('#sortBar li').removeClass('on');
-    $(this).addClass('on');
-
-    let index = $('#sortBar li').index(this);
-    pageSort = 0
-    $('#pageStep li').removeClass('on');
-    $('#pageStep li:eq(0)').addClass('on')
-
-    mainInclude(`page/${menuData[menuSort]}${index + 1}_1.html`);
-})
-
-
-// 步驟切換
-$('#pageStep li').click(function() {
-    $('#pageStep li').removeClass('on');
-    $(this).addClass('on');
-
-    let index = $('#pageStep li').index(this);
-    let findOn = $('#sortBar li').index($('#sortBar li.on'))
-
-    mainInclude(`page/${menuData[menuSort]}${findOn + 1}_${index + 1}.html`);
-})
 
 
 // ======== 函 式 ========
