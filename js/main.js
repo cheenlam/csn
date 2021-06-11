@@ -40,7 +40,7 @@ $('#menu li').click(function(e) {
     $('#pageStep li').removeClass('on');
     $('#pageStep li:eq(0)').addClass('on')
     e.stopPropagation();
-    let pageStep;  
+    let pageStep;
     let jdm01 = $('#menu>ul>li').index(this);
 
     $('#menu>ul>li').removeClass('on');
@@ -156,6 +156,24 @@ function chLang() {
     })
 }
 chLang()
+
+//置頂按扭滑動
+$('#goTop').click(function() {
+    window.scrollTo({
+        top: 0,
+        behavior: "smooth"
+    });
+});
+
+var scroll = $(window).scroll(function() {
+    console.log($('#pageStep').offset().top)
+
+    if (scroll.scrollTop() >= $('#pageStep').offset().top) {
+        $('#goTop').css('display','block')
+    } else {
+        $('#goTop').css('display','none')
+    };
+});
 
 
 

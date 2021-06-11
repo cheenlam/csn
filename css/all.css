@@ -525,6 +525,15 @@ img {
     margin: 5px;
 }
 
+.goTop{
+    width: 40px;
+    height: 40px;
+    position:fixed;
+    bottom: 20px;
+    right: 15px;
+    display: none;
+}
+
 
 /* ========== 共用設定 ========== */
 
@@ -538,7 +547,8 @@ img {
 .hd_langSel,
 .hd_Lang li,
 .hd_bar li,
-.menuClose {
+.menuClose,
+.goTop {
     cursor: pointer;
 }
 
