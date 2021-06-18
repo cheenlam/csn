@@ -401,10 +401,15 @@ img {
     flex-shrink: 0;
 }
 
+body{
+    background-color: #000 !important;
+}
+
 .moduleMsg {
     font-size: 0.9rem;
     margin-left: 30px;
     line-height: 22px;
+    color: #2b6375;
 }
 
 .moduleMsgTitle {
@@ -473,7 +478,7 @@ img {
 
 .module .bgc01 {
     color: #000;
-    background: #c38b2c;
+    background: #c38b2c ;
 }
 
 .module .bgc02 {
